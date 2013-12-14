@@ -1,0 +1,28 @@
+<% if user_signed_in? %>
+<%= simple_form_for(@htscdt) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :htsus %>
+    <%= f.date_select :creation_date %>
+    <%= f.input :author %>
+    <%= f.input :verified %>
+    <%= f.input :inv_description %>
+    <%= f.input :gen_eng_desc %>
+    <%= f.input :gen_esp_desc %>
+    <%= f.input :early_triggers %>
+    <%= f.input :legal_authority %>
+    <%= f.input :la_link %>
+    <%= f.input :other_link %>
+    <%= f.input :comments %>
+    <%= f.input :confidence %>
+    <%= f.input :image %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+<% else %>
+    <p>You don't have permition to see this page</p>
+<% end %>

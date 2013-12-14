@@ -1,0 +1,57 @@
+<% if user_signed_in? %>
+<h1>Listing htscdts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Htsus</th>
+      <th>Date</th>
+      <th>Author</th>
+      <th>Verified</th>
+      <th>Inv description</th>
+      <th>Gen eng desc</th>
+      <th>Gen esp desc</th>
+      <th>Early triggers</th>
+      <th>Legal authority</th>
+      <th>La link</th>
+      <th>Other link</th>
+      <th>Comments</th>
+      <th>Confidence</th>
+      <th>Image</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @htscdts.each do |htscdt| %>
+      <tr>
+        <td><%= htscdt.htsus %></td>
+        <td><%= htscdt.creation_date %></td>
+        <td><%= htscdt.author %></td>
+        <td><%= htscdt.verified %></td>
+        <td><%= htscdt.inv_description %></td>
+        <td><%= htscdt.gen_eng_desc %></td>
+        <td><%= htscdt.gen_esp_desc %></td>
+        <td><%= htscdt.early_triggers %></td>
+        <td><%= htscdt.legal_authority %></td>
+        <td><%= htscdt.la_link %></td>
+        <td><%= htscdt.other_link %></td>
+        <td><%= htscdt.comments %></td>
+        <td><%= htscdt.confidence %></td>
+        <td><%= htscdt.image %></td>
+        <td><%= link_to 'Show', htscdt %></td>
+        <td><%= link_to 'Edit', edit_htscdt_path(htscdt) %></td>
+        <td><%= link_to 'Destroy', htscdt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Htscdt', new_htscdt_path %>
+<% else %>
+    <p>You don't have permition to see this page</p>
+<% end %>

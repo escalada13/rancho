@@ -1,0 +1,10 @@
+<% if user_signed_in? %>
+<h1>Editing htscdt</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @htscdt %> |
+<%= link_to 'Back', htscdts_path %>
+<% else %>
+    <p>You don't have permition to see this page</p>
+<% end %>

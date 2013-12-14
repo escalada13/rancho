@@ -1,0 +1,78 @@
+<% if user_signed_in? %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Htsus:</strong>
+  <%= @htscdt.htsus %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @htscdt.creation_date %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @htscdt.author %>
+</p>
+
+<p>
+  <strong>Verified:</strong>
+  <%= @htscdt.verified %>
+</p>
+
+<p>
+  <strong>Inv description:</strong>
+  <%= @htscdt.inv_description %>
+</p>
+
+<p>
+  <strong>Gen eng desc:</strong>
+  <%= @htscdt.gen_eng_desc %>
+</p>
+
+<p>
+  <strong>Gen esp desc:</strong>
+  <%= @htscdt.gen_esp_desc %>
+</p>
+
+<p>
+  <strong>Early triggers:</strong>
+  <%= @htscdt.early_triggers %>
+</p>
+
+<p>
+  <strong>Legal authority:</strong>
+  <%= @htscdt.legal_authority %>
+</p>
+
+<p>
+  <strong>La link:</strong>
+  <%= @htscdt.la_link %>
+</p>
+
+<p>
+  <strong>Other link:</strong>
+  <%= @htscdt.other_link %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @htscdt.comments %>
+</p>
+
+<p>
+  <strong>Confidence:</strong>
+  <%= @htscdt.confidence %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @htscdt.image %>
+</p>
+
+<%= link_to 'Edit', edit_htscdt_path(@htscdt) %> |
+<%= link_to 'Back', htscdts_path %>
+<% else %>
+    <p>You don't have permition to see this page</p>
+<% end %>

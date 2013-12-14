@@ -1,0 +1,10 @@
+<h1>Welcome to Rancho</h1>
+  <% if user_signed_in? %>
+    <h2><%= link_to 'HTSCDT', htscdts_path %></h2>
+  <% else %>
+    <p>Please login</p>
+  <% end %>
+    <% if current_user.has_role? :admin %>
+      <p>You are an admin</p>
+  <% end %>
+</ul>
